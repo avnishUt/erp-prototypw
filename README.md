@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# School ERP Portal – Prototype
 
-## Getting Started
+Clickable prototype of a school ERP portal (Vidya Bharati Public School, sample data). Built with Next.js 15 + Tailwind CSS. All data is mock data stored in the browser (localStorage) — no backend.
 
-First, run the development server:
+## Run
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
+# or production build
+npm run build && PORT=3010 npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Use **"Viewing as"** in the top bar to switch between Admin, Teacher, Student and Parent. **Reset demo data** (sidebar) restores the sample data. The **clock** button (top right) sets a demo time, e.g. 7:40 AM for check-in or 8:05 AM for the Period-1 roll call.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Modules
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Dashboard** – role-specific overview
+- **Attendance Process** – paper register vs portal, step-by-step school day
+- **Student Attendance** – Period-1 roll call by the class teacher (valid for the whole day), review, submit, parent SMS preview, admin live board, monthly register
+- **Teacher Attendance** – check-in/check-out, working time, timeline, monthly hours, leave requests and approval
+- **Admission Enquiries** – enquiry pipeline to admission
+- **Students** – list, profile, new admission
+- **Timetable** – clash-free weekly timetable per class / per teacher
+- **Exams & Results** – marks entry, grades, ranks, report card
+- **Fees** – dues, collection, receipts, simulated online payment
+- **Doubt Solving** – students ask (with photo), teachers answer, resolve & rate, admin reassign
+- **Notices** – audience-targeted announcements
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Simulated in the prototype: GPS check-in, SMS/WhatsApp alerts, payment gateway, login.
